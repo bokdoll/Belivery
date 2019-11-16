@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_map.*
+import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
 import net.daum.mf.map.api.MapView
 
@@ -41,9 +42,9 @@ class MapActivity : AppCompatActivity() {
         mapView.setDaumMapApiKey("c40e78d2bd41c37abe418f6cf4595c75")
 
         if (!checkLocationServicesStatus()) {
-            showDialogForLocationServiceSetting();
+            showDialogForLocationServiceSetting()
         } else {
-            checkRunTimePermission();
+            checkRunTimePermission()
         }
 
         lm = getSystemService(Context.LOCATION_SERVICE) as LocationManager
@@ -55,12 +56,22 @@ class MapActivity : AppCompatActivity() {
         mapViewContainer.addView(mapView)
         mapViewContainer.addView(course_layout)
 
+
         var location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
         if (location != null) {
             val long = location.longitude
             val lat = location.latitude
             onCurrentLocationUpdate(mapView, MapPoint.mapPointWithGeoCoord(lat, long), 0.0001f)
         }
+
+        /**
+         *  현재 위치 잡기 : 우리 집 표시
+         */
+        mapView.setCustomCurrentLocationMarkerTrackingImage(
+            R.drawable.icon_point,
+            MapPOIItem.ImageOffset(23, 23)
+        )
+        mapView.currentLocationTrackingMode =  MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading
     }
 
     override fun onDestroy() {
@@ -86,6 +97,7 @@ class MapActivity : AppCompatActivity() {
         )
     }
 
+
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -110,7 +122,6 @@ class MapActivity : AppCompatActivity() {
             }
 
             if (check_result) {
-
                 //위치 값을 가져올 수 있음
             } else {
                 // 거부한 퍼미션이 있다면 앱을 사용할 수 없는 이유를 설명해주고 앱을 종료합니다.2 가지 경우가 있습니다.
@@ -129,12 +140,9 @@ class MapActivity : AppCompatActivity() {
                         applicationContext,
                         "퍼미션이 거부되었습니다. 앱을 다시 실행하여 퍼미션을 허용해주세요.",
                         Toast.LENGTH_LONG
-                    ).show();
-                    finish();
-
-
+                    ).show()
+                    finish()
                 } else {
-
                     Toast.makeText(
                         applicationContext,
                         "퍼미션이 거부되었습니다. 설정(앱 정보)에서 퍼미션을 허용해야 합니다. ",
