@@ -1,4 +1,4 @@
-package com.ppusheoppusheo.kakao
+package com.ppusheoppusheo.belivery
 
 import org.junit.Test
 
