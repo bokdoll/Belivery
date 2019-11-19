@@ -1,4 +1,4 @@
-package com.ppusheoppusheo.kakao
+package com.ppusheoppusheo.belivery.ui
 
 import android.Manifest
 import android.content.Context
@@ -14,6 +14,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.ppusheoppusheo.belivery.R
 import kotlinx.android.synthetic.main.activity_map.*
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
@@ -51,10 +52,12 @@ class MapActivity : AppCompatActivity() {
 
         val mapViewContainer = findViewById<ViewGroup>(R.id.mapview)
 
-        ((course_layout.parent) as ViewGroup).removeView(course_layout)
+        ((cl_map_top.parent) as ViewGroup).removeView(cl_map_top)
+        ((cl_map_rider_info.parent) as ViewGroup).removeView(cl_map_rider_info)
 
         mapViewContainer.addView(mapView)
-        mapViewContainer.addView(course_layout)
+        mapViewContainer.addView(cl_map_top)
+        mapViewContainer.addView(cl_map_rider_info)
 
 
         var location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
