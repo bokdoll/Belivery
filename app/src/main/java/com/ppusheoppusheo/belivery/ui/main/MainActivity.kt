@@ -2,19 +2,23 @@ package com.ppusheoppusheo.belivery.ui.main
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.LinearLayout
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asksira.loopingviewpager.LoopingViewPager
 import com.ppusheoppusheo.belivery.R
 import com.ppusheoppusheo.belivery.model.OrderTogetherData
 import com.ppusheoppusheo.belivery.ui.MapActivity
+import com.ppusheoppusheo.belivery.ui.main.adapter.AdViewPagerAdapter
 import com.ppusheoppusheo.belivery.ui.main.adapter.OrderTogetherRVAdapter
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.concurrent.timer
+
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var orderTogetherRVAdapter: OrderTogetherRVAdapter
+    lateinit var adapter : AdViewPagerAdapter
+    lateinit var viewPager : LoopingViewPager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +34,28 @@ class MainActivity : AppCompatActivity() {
         //btn_main_timer.setOnClickListener {
         //    runTimer()
         //}
+
+        viewPager = findViewById(R.id.vp_main_ad)
+
+        try {
+            adapter = AdViewPagerAdapter(this@MainActivity, createSecondDummyItems(), true)
+            viewPager.setAdapter(adapter)
+        }catch (e: Exception){
+            Log.e("현주", e.message.toString())
+        }
+    }
+
+    private fun createSecondDummyItems(): java.util.ArrayList<Int> {
+        val items = java.util.ArrayList<Int>()
+        items.add(0, 1)
+        items.add(1, 2)
+        items.add(2, 3)
+        return items
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewPager.resumeAutoScroll()
     }
 
     //같이 시키리 서버 통신

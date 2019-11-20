@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".ui.main.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_main_bottom_tap"
         android:layout_width="0dp"
-        android:layout_height="65dp"
+        android:layout_height="60dp"
         android:background="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,10 +27,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#a2a2a2"
+            app:layout_constraintBottom_toTopOf="parent"
+            tools:layout_editor_absoluteX="228dp" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btn_main_map"
-            android:layout_width="195dp"
-            android:layout_height="60dp"
+            android:layout_width="165dp"
+            android:layout_height="55dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -44,28 +53,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/btn_main_order"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="18dp"
-        android:background="@drawable/circle_main_order"
-        app:layout_constraintBottom_toBottomOf="@+id/cl_main_bottom_tap"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/receipt_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
@@ -152,7 +141,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView"
+                            android:id="@+id/textView200"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="현재 "
@@ -196,11 +185,12 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/textView201"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="굶주려 있어요"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        tools:ignore="DuplicateIds" />
 
                 </LinearLayout>
 
@@ -249,8 +239,373 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_main_order_together_restaurant_list">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
+
+                    <com.asksira.loopingviewpager.LoopingViewPager
+                        android:id="@+id/vp_main_ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        app:autoScroll="true"
+                        app:isInfinite="true"
+                        app:itemAspectRatio="1.33"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:scrollInterval="5000"
+                        app:viewpagerAspectRatio="1.78" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:background="@android:color/white"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="9dp"
+                        android:lineSpacingExtra="13sp"
+                        android:text="혼자 시키리"
+                        android:textColor="#2e2e2e"
+                        android:textSize="17sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#f2f2f2">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="63dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imageView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="21dp"
+                            android:src="@drawable/main_chicken"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="치킨"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                            app:layout_constraintStart_toStartOf="@+id/imageView9"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="21dp"
+                            android:src="@drawable/main_raw_fish"
+                            app:layout_constraintStart_toEndOf="@+id/imageView9"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="분식"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+                            app:layout_constraintStart_toStartOf="@+id/imageView8"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="21dp"
+                            android:src="@drawable/main_snack"
+                            app:layout_constraintStart_toEndOf="@+id/imageView7"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="회"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                            app:layout_constraintStart_toStartOf="@+id/imageView7"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+                        <ImageView
+                            android:id="@+id/imageView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:src="@drawable/main_pizza"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="피자/양식"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView10"
+                            app:layout_constraintStart_toStartOf="@+id/imageView10"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+                        <ImageView
+                            android:id="@+id/imageView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:src="@drawable/main_night"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                            app:layout_constraintStart_toStartOf="@+id/imageView7"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="야식"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                            app:layout_constraintStart_toStartOf="@+id/imageView11"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+                        <ImageView
+                            android:id="@+id/imageView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="44dp"
+                            android:layout_marginLeft="44dp"
+                            android:layout_marginTop="40dp"
+                            android:src="@drawable/main_japanese"
+                            app:layout_constraintStart_toEndOf="@+id/imageView7"
+                            app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="일식"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView12"
+                            app:layout_constraintStart_toStartOf="@+id/imageView12"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+                        <ImageView
+                            android:id="@+id/imageView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="350dp"
+                            android:src="@drawable/main_zzim"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView103"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="찜/탕"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView16"
+                            app:layout_constraintStart_toStartOf="@+id/imageView16"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+                        <ImageView
+                            android:id="@+id/imageView17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="350dp"
+                            android:src="@drawable/main_dosirak"
+                            app:layout_constraintStart_toEndOf="@+id/imageView16"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView104"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="도시락"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView17"
+                            app:layout_constraintStart_toStartOf="@+id/imageView17"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+                        <ImageView
+                            android:id="@+id/imageView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="350dp"
+                            android:src="@drawable/main_dessert"
+                            app:layout_constraintStart_toEndOf="@+id/imageView17"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="디저트"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView18"
+                            app:layout_constraintStart_toStartOf="@+id/imageView18"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+
+                        <ImageView
+                            android:id="@+id/imageView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="239dp"
+                            android:src="@drawable/main_korean"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView100"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="한식"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+                            app:layout_constraintStart_toStartOf="@+id/imageView13"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+                        <ImageView
+                            android:id="@+id/imageView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="239dp"
+                            android:src="@drawable/main_chinese"
+                            app:layout_constraintStart_toEndOf="@+id/imageView13"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="중식"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView14"
+                            app:layout_constraintStart_toStartOf="@+id/imageView14"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+                        <ImageView
+                            android:id="@+id/imageView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="239dp"
+                            android:src="@drawable/main_pork"
+                            app:layout_constraintStart_toEndOf="@+id/imageView14"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="7sp"
+                            android:text="족발/보쌈"
+                            android:textColor="@color/mainBlack"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView15"
+                            app:layout_constraintStart_toStartOf="@+id/imageView15"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_main_order"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/circle_main_order"
+        app:layout_constraintBottom_toBottomOf="@+id/cl_main_bottom_tap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/receipt_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
