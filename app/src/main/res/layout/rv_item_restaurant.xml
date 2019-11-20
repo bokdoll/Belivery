@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/iv_rv_item_restaurant_img"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/main_chicken"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_rv_item_restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="2dp"
+        android:letterSpacing="-0.03"
+        android:lineHeight="30sp"
+        android:lineSpacingExtra="15sp"
+        android:textColor="#2e2e2e"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_rv_item_restaurant_img"
+        app:layout_constraintTop_toTopOf="@+id/iv_rv_item_restaurant_img"
+        tools:text="국대 떡볶이 마포역점" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="13dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_rv_item_restaurant_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rv_item_restaurant_name"
+        app:srcCompat="@drawable/green_star" />
+
+    <TextView
+        android:id="@+id/tv_rv_item_restaurant_star_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="18sp"
+        android:textColor="#2e2e2e"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView20"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rv_item_restaurant_name"
+        tools:text="4.2" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="18sp"
+        android:text="최소주문"
+        android:textColor="#434343"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_rv_item_restaurant_star_rate"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rv_item_restaurant_name" />
+
+    <TextView
+        android:id="@+id/tv_rv_item_restaurant_min_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="18sp"
+        android:textColor="#434343"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toTopOf="@+id/textView22"
+        tools:text="14,000원" />
+
+    <TextView
+        android:id="@+id/tv_rv_item_restaurant_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="19sp"
+        android:textColor="#707070"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_rv_item_restaurant_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        tools:text="육개장, 뼈다귀해장국" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="9dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_rv_item_restaurant_menu"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rv_item_restaurant_menu"
+        app:srcCompat="@drawable/restaurant_icon" />
+
+    <TextView
+        android:id="@+id/tv_rv_item_restaurant_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="2dp"
+        android:letterSpacing="-0.03"
+        android:lineHeight="30sp"
+        android:lineSpacingExtra="19sp"
+        android:text="52~62분"
+        android:textColor="#2e2e2e"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView21"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rv_item_restaurant_menu" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="19sp"
+        android:text="배달팁 "
+        android:textColor="#434343"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_rv_item_restaurant_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rv_item_restaurant_menu" />
+
+    <TextView
+        android:id="@+id/tv_rv_item_restaurant_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="19sp"
+        android:textColor="#434343"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/textView26"
+        app:layout_constraintTop_toTopOf="@+id/textView26"
+        tools:text="3,000원" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/mainBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_rv_item_restaurant_img" />
+</androidx.constraintlayout.widget.ConstraintLayout>
