@@ -75,6 +75,13 @@ class MapActivity : AppCompatActivity() {
             MapPOIItem.ImageOffset(23, 23)
         )
         mapView.currentLocationTrackingMode =  MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading
+
+        /**
+         *  뒤로 가기 버튼
+         */
+        btn_map_back.setOnClickListener {
+            finish()
+        }
     }
 
     override fun onDestroy() {

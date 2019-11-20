@@ -11,6 +11,7 @@ import com.ppusheoppusheo.belivery.model.OrderTogetherData
 import com.ppusheoppusheo.belivery.ui.MapActivity
 import com.ppusheoppusheo.belivery.ui.main.adapter.AdViewPagerAdapter
 import com.ppusheoppusheo.belivery.ui.main.adapter.OrderTogetherRVAdapter
+import com.ppusheoppusheo.belivery.ui.restaurant.RestaurantActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -30,6 +31,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btn_main_alone_snack.setOnClickListener {
+            val intent = Intent(this@MainActivity, RestaurantActivity::class.java)
+            startActivity(intent)
+        }
+
         getOrderTogetherFoodRequest()
         //btn_main_timer.setOnClickListener {
         //    runTimer()
@@ -38,14 +44,14 @@ class MainActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.vp_main_ad)
 
         try {
-            adapter = AdViewPagerAdapter(this@MainActivity, createSecondDummyItems(), true)
+            adapter = AdViewPagerAdapter(this@MainActivity, createDummyItems(), true)
             viewPager.setAdapter(adapter)
         }catch (e: Exception){
             Log.e("현주", e.message.toString())
         }
     }
 
-    private fun createSecondDummyItems(): java.util.ArrayList<Int> {
+    private fun createDummyItems(): java.util.ArrayList<Int> {
         val items = java.util.ArrayList<Int>()
         items.add(0, 1)
         items.add(1, 2)
