@@ -71,7 +71,7 @@ class MapActivity : AppCompatActivity() {
          *  현재 위치 잡기 : 우리 집 표시
          */
         mapView.setCustomCurrentLocationMarkerTrackingImage(
-            R.drawable.icon_point,
+            R.drawable.my_home_map,
             MapPOIItem.ImageOffset(23, 23)
         )
         mapView.currentLocationTrackingMode =  MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading
