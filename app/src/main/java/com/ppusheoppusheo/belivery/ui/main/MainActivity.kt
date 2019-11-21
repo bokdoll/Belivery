@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asksira.loopingviewpager.LoopingViewPager
 import com.ppusheoppusheo.belivery.R
 import com.ppusheoppusheo.belivery.model.OrderTogetherData
-import com.ppusheoppusheo.belivery.ui.MapActivity
+import com.ppusheoppusheo.belivery.ui.map.MapActivity
 import com.ppusheoppusheo.belivery.ui.main.adapter.AdViewPagerAdapter
 import com.ppusheoppusheo.belivery.ui.main.adapter.OrderTogetherRVAdapter
 import com.ppusheoppusheo.belivery.ui.restaurant.RestaurantActivity
@@ -25,22 +25,53 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        initView()
+    }
 
+    override fun onResume() {
+        super.onResume()
+        viewPager.resumeAutoScroll()
+    }
+
+
+    private fun initView(){
+
+        //같이 시키리 서버 통신
+        getOrderTogetherFoodRequest()
+
+        // 광고 뷰페이저 설정
+        displayAd()
+
+        //맵 액티비티 띄우기
         btn_main_map.setOnClickListener{
             val intent = Intent(this@MainActivity, MapActivity::class.java)
             startActivity(intent)
         }
 
-        btn_main_alone_snack.setOnClickListener {
-            val intent = Intent(this@MainActivity, RestaurantActivity::class.java)
-            startActivity(intent)
-        }
+        //식당 액티비티 띄우기
+        btn_main_alone_chicken.setOnClickListener { startRestaurantActivity(0)}
+        btn_main_alone_raw_fish.setOnClickListener { startRestaurantActivity(1)}
+        btn_main_alone_snack.setOnClickListener { startRestaurantActivity(2)}
+        btn_main_alone_pizza.setOnClickListener { startRestaurantActivity(3)}
+        btn_main_alone_night.setOnClickListener { startRestaurantActivity(4)}
+        btn_main_alone_japanese.setOnClickListener { startRestaurantActivity(5)}
+        btn_main_alone_korean.setOnClickListener { startRestaurantActivity(6)}
+        btn_main_alone_chinese.setOnClickListener { startRestaurantActivity(7)}
+        btn_main_alone_pork.setOnClickListener { startRestaurantActivity(8)}
+        btn_main_alone_zzim.setOnClickListener { startRestaurantActivity(9)}
+        btn_main_alone_dosirak.setOnClickListener { startRestaurantActivity(10)}
+        btn_main_alone_dessert.setOnClickListener { startRestaurantActivity(11)}
+    }
 
-        getOrderTogetherFoodRequest()
-        //btn_main_timer.setOnClickListener {
-        //    runTimer()
-        //}
+    //식당 액티비티 띄우기
+    fun startRestaurantActivity(menu_num: Int){
+        val intent = Intent(this@MainActivity, RestaurantActivity::class.java)
+        intent.putExtra("menu_num", menu_num)
+        startActivity(intent)
+    }
 
+    // 광고 뷰페이저 설정
+    private fun displayAd(){
         viewPager = findViewById(R.id.vp_main_ad)
 
         try {
@@ -59,10 +90,6 @@ class MainActivity : AppCompatActivity() {
         return items
     }
 
-    override fun onResume() {
-        super.onResume()
-        viewPager.resumeAutoScroll()
-    }
 
     //같이 시키리 서버 통신
     private fun getOrderTogetherFoodRequest(){
@@ -80,17 +107,5 @@ class MainActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@MainActivity,LinearLayoutManager.HORIZONTAL, false)
         }
     }
-
-
-//    fun runTimer(){
-//        var time: Int = 3
-//        // 1분마다
-//        timer(period = 60000){
-//            runOnUiThread {
-//                time--
-//                tv_main_time_min.text = "$time"
-//            }
-//        }
-//    }
 }
 

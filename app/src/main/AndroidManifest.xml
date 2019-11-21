@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme"
         android:screenOrientation="portrait">
         <activity android:name=".ui.restaurant.RestaurantActivity"></activity>
-        <activity android:name=".ui.MapActivity" />
+        <activity android:name=".ui.map.MapActivity" />
 
         <meta-data
             android:name="com.kakao.sdk.Appkey"
