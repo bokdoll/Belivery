@@ -99,12 +99,12 @@
 
     <ImageView
         android:id="@+id/imageView21"
-        android:layout_width="9dp"
-        android:layout_height="9dp"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
         android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="@+id/tv_rv_item_restaurant_menu"
         app:layout_constraintTop_toBottomOf="@+id/tv_rv_item_restaurant_menu"
-        app:srcCompat="@drawable/restaurant_icon" />
+        app:srcCompat="@drawable/clock_icon" />
 
     <TextView
         android:id="@+id/tv_rv_item_restaurant_time"

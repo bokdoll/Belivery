@@ -145,13 +145,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="현재 "
+                            android:lineHeight="30sp"
+                            android:textSize="19sp"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="14sp"
                             android:textColor="@android:color/white" />
 
                         <TextView
                             android:id="@+id/tv_main_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="00동"
+                            tools:text="00동"
+                            android:lineHeight="30sp"
+                            android:textSize="19sp"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="14sp"
                             android:textColor="@android:color/white" />
 
                         <TextView
@@ -159,6 +167,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="에"
+                            android:lineHeight="30sp"
+                            android:textSize="19sp"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="14sp"
                             android:textColor="@android:color/white" />
                     </LinearLayout>
 
@@ -173,6 +185,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="00"
+                            android:lineHeight="30sp"
+                            android:textSize="19sp"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="14sp"
                             android:textColor="@android:color/white" />
 
                         <TextView
@@ -180,6 +196,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="명의 빌리들이"
+                            android:lineHeight="30sp"
+                            android:textSize="19sp"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="14sp"
                             android:textColor="@android:color/white" />
 
                     </LinearLayout>
@@ -189,6 +209,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="굶주려 있어요"
+                        android:lineHeight="30sp"
+                        android:textSize="19sp"
+                        android:letterSpacing="-0.02"
+                        android:lineSpacingExtra="14sp"
                         android:textColor="@android:color/white"
                         tools:ignore="DuplicateIds" />
 
@@ -198,9 +222,13 @@
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="21dp"
+                    android:layout_marginTop="32dp"
+                    android:letterSpacing="-0.03"
+                    android:lineHeight="30sp"
+                    android:lineSpacingExtra="13sp"
                     android:text="같이 시키리"
                     android:textColor="@android:color/white"
+                    android:textSize="17sp"
                     app:layout_constraintStart_toStartOf="@+id/linearLayout2"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
@@ -208,8 +236,9 @@
                     android:id="@+id/btn_main_together_order"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView12"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+                    app:layout_constraintTop_toTopOf="@+id/textView12">
 
                     <TextView
                         android:id="@+id/textView13"
@@ -228,6 +257,16 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageView23"
+                    android:layout_width="191dp"
+                    android:layout_height="123dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_main_search"
+                    app:srcCompat="@drawable/main_belivery" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

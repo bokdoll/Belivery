@@ -15,7 +15,7 @@ class AdViewPagerAdapter(context: Context, itemList: ArrayList<Int>, isInfinite:
 
     //This method will be triggered if the item View has not been inflated before.
     override fun inflateView(viewType: Int, container: ViewGroup, listPosition: Int): View {
-        return LayoutInflater.from(context).inflate(R.layout.item_pager_main, container, false)
+        return LayoutInflater.from(context).inflate(R.layout.item_pager_main_ad, container, false)
     }
 
     override fun bindView(convertView: View, listPosition: Int, viewType: Int) {
