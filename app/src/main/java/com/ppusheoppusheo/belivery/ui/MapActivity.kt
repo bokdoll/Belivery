@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.LocationManager
+import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
@@ -74,7 +75,8 @@ class MapActivity : AppCompatActivity() {
             R.drawable.my_home_map,
             MapPOIItem.ImageOffset(23, 23)
         )
-        mapView.currentLocationTrackingMode =  MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading
+        mapView.currentLocationTrackingMode =
+            MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading
 
         /**
          *  뒤로 가기 버튼
@@ -82,12 +84,26 @@ class MapActivity : AppCompatActivity() {
         btn_map_back.setOnClickListener {
             finish()
         }
+
+        /**
+         *  전화 걸기를 눌렀을 때
+         */
+        btn_map_rider_tel.setOnClickListener {
+            openDial()
+        }
     }
 
     override fun onDestroy() {
         super.onDestroy()
         mapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOff)
         mapView.setShowCurrentLocationMarker(false)
+    }
+
+
+    fun openDial() {
+        val tel = "tel:01098765432"
+        val intent = Intent("android.intent.action.DIAL", Uri.parse(tel))
+        startActivity(intent)
     }
 
     fun onCurrentLocationUpdate(
