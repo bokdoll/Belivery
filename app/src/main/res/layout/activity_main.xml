@@ -129,11 +129,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="50dp"
                     android:orientation="vertical"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn_main_mypage">
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -144,34 +143,34 @@
                             android:id="@+id/textView200"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="현재 "
-                            android:lineHeight="30sp"
-                            android:textSize="19sp"
                             android:letterSpacing="-0.02"
+                            android:lineHeight="30sp"
                             android:lineSpacingExtra="14sp"
-                            android:textColor="@android:color/white" />
+                            android:text="현재 "
+                            android:textColor="@android:color/white"
+                            android:textSize="19sp" />
 
                         <TextView
                             android:id="@+id/tv_main_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            tools:text="00동"
-                            android:lineHeight="30sp"
-                            android:textSize="19sp"
                             android:letterSpacing="-0.02"
+                            android:lineHeight="30sp"
                             android:lineSpacingExtra="14sp"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:textSize="19sp"
+                            tools:text="00동" />
 
                         <TextView
                             android:id="@+id/textView4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="에"
-                            android:lineHeight="30sp"
-                            android:textSize="19sp"
                             android:letterSpacing="-0.02"
+                            android:lineHeight="30sp"
                             android:lineSpacingExtra="14sp"
-                            android:textColor="@android:color/white" />
+                            android:text="에"
+                            android:textColor="@android:color/white"
+                            android:textSize="19sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -184,23 +183,23 @@
                             android:id="@+id/tv_main_beli_count"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="00"
-                            android:lineHeight="30sp"
-                            android:textSize="19sp"
                             android:letterSpacing="-0.02"
+                            android:lineHeight="30sp"
                             android:lineSpacingExtra="14sp"
-                            android:textColor="@android:color/white" />
+                            android:text="00"
+                            android:textColor="@android:color/white"
+                            android:textSize="19sp" />
 
                         <TextView
                             android:id="@+id/textView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="명의 빌리들이"
-                            android:lineHeight="30sp"
-                            android:textSize="19sp"
                             android:letterSpacing="-0.02"
+                            android:lineHeight="30sp"
                             android:lineSpacingExtra="14sp"
-                            android:textColor="@android:color/white" />
+                            android:text="명의 빌리들이"
+                            android:textColor="@android:color/white"
+                            android:textSize="19sp" />
 
                     </LinearLayout>
 
@@ -208,12 +207,12 @@
                         android:id="@+id/textView201"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="굶주려 있어요"
-                        android:lineHeight="30sp"
-                        android:textSize="19sp"
                         android:letterSpacing="-0.02"
+                        android:lineHeight="30sp"
                         android:lineSpacingExtra="14sp"
+                        android:text="굶주려 있어요"
                         android:textColor="@android:color/white"
+                        android:textSize="19sp"
                         tools:ignore="DuplicateIds" />
 
                 </LinearLayout>
@@ -222,7 +221,7 @@
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="177dp"
                     android:letterSpacing="-0.03"
                     android:lineHeight="30sp"
                     android:lineSpacingExtra="13sp"
@@ -230,15 +229,15 @@
                     android:textColor="@android:color/white"
                     android:textSize="17sp"
                     app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/btn_main_together_order"
-                    android:layout_width="wrap_content"
+                    android:layout_width="94dp"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                    android:layout_marginTop="156dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView12">
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
                     <TextView
                         android:id="@+id/textView13"
@@ -260,12 +259,12 @@
 
                 <ImageView
                     android:id="@+id/imageView23"
-                    android:layout_width="191dp"
+                    android:layout_width="165dp"
                     android:layout_height="123dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginEnd="27dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn_main_search"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6"
                     app:srcCompat="@drawable/main_belivery" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -274,7 +273,7 @@
                 android:id="@+id/rv_main_order_together_restaurant_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="213dp"
+                android:layout_marginTop="250dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -345,7 +344,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/imageView9"
+                            android:id="@+id/btn_main_alone_chicken"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="21dp"
@@ -362,19 +361,19 @@
                             android:text="치킨"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView9"
-                            app:layout_constraintStart_toStartOf="@+id/imageView9"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_chicken"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_chicken"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_chicken" />
 
                         <ImageView
-                            android:id="@+id/imageView7"
+                            android:id="@+id/btn_main_alone_raw_fish"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="40dp"
                             android:layout_marginLeft="40dp"
                             android:layout_marginTop="21dp"
                             android:src="@drawable/main_raw_fish"
-                            app:layout_constraintStart_toEndOf="@+id/imageView9"
+                            app:layout_constraintStart_toEndOf="@+id/btn_main_alone_chicken"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
@@ -398,7 +397,7 @@
                             android:layout_marginLeft="40dp"
                             android:layout_marginTop="21dp"
                             android:src="@drawable/main_snack"
-                            app:layout_constraintStart_toEndOf="@+id/imageView7"
+                            app:layout_constraintStart_toEndOf="@+id/btn_main_alone_raw_fish"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
@@ -409,18 +408,18 @@
                             android:text="회"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView7"
-                            app:layout_constraintStart_toStartOf="@+id/imageView7"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_raw_fish"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_raw_fish"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_raw_fish" />
 
                         <ImageView
-                            android:id="@+id/imageView10"
+                            android:id="@+id/btn_main_alone_pizza"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="40dp"
                             android:src="@drawable/main_pizza"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_chicken" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -430,19 +429,19 @@
                             android:text="피자/양식"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView10"
-                            app:layout_constraintStart_toStartOf="@+id/imageView10"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_pizza"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_pizza"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_pizza" />
 
                         <ImageView
-                            android:id="@+id/imageView11"
+                            android:id="@+id/btn_main_alone_night"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="40dp"
                             android:src="@drawable/main_night"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView7"
-                            app:layout_constraintStart_toStartOf="@+id/imageView7"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_raw_fish"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_raw_fish"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_raw_fish" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -452,19 +451,19 @@
                             android:text="야식"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView11"
-                            app:layout_constraintStart_toStartOf="@+id/imageView11"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_night"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_night"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_night" />
 
                         <ImageView
-                            android:id="@+id/imageView12"
+                            android:id="@+id/btn_main_alone_japanese"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="44dp"
                             android:layout_marginLeft="44dp"
                             android:layout_marginTop="40dp"
                             android:src="@drawable/main_japanese"
-                            app:layout_constraintStart_toEndOf="@+id/imageView7"
+                            app:layout_constraintStart_toEndOf="@+id/btn_main_alone_raw_fish"
                             app:layout_constraintTop_toTopOf="@+id/textView10" />
 
                         <TextView
@@ -475,12 +474,12 @@
                             android:text="일식"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView12"
-                            app:layout_constraintStart_toStartOf="@+id/imageView12"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_japanese"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_japanese"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_japanese" />
 
                         <ImageView
-                            android:id="@+id/imageView16"
+                            android:id="@+id/btn_main_alone_zzim"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="350dp"
@@ -497,19 +496,19 @@
                             android:text="찜/탕"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView16"
-                            app:layout_constraintStart_toStartOf="@+id/imageView16"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_zzim"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_zzim"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_zzim" />
 
                         <ImageView
-                            android:id="@+id/imageView17"
+                            android:id="@+id/btn_main_alone_dosirak"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="40dp"
                             android:layout_marginLeft="40dp"
                             android:layout_marginTop="350dp"
                             android:src="@drawable/main_dosirak"
-                            app:layout_constraintStart_toEndOf="@+id/imageView16"
+                            app:layout_constraintStart_toEndOf="@+id/btn_main_alone_zzim"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
@@ -521,19 +520,19 @@
                             android:text="도시락"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView17"
-                            app:layout_constraintStart_toStartOf="@+id/imageView17"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_dosirak"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_dosirak"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_dosirak" />
 
                         <ImageView
-                            android:id="@+id/imageView18"
+                            android:id="@+id/btn_main_alone_dessert"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="40dp"
                             android:layout_marginLeft="40dp"
                             android:layout_marginTop="350dp"
                             android:src="@drawable/main_dessert"
-                            app:layout_constraintStart_toEndOf="@+id/imageView17"
+                            app:layout_constraintStart_toEndOf="@+id/btn_main_alone_dosirak"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
@@ -544,12 +543,12 @@
                             android:text="디저트"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView18"
-                            app:layout_constraintStart_toStartOf="@+id/imageView18"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_dessert"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_dessert"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_dessert" />
 
                         <ImageView
-                            android:id="@+id/imageView13"
+                            android:id="@+id/btn_main_alone_korean"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="239dp"
@@ -566,19 +565,19 @@
                             android:text="한식"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView13"
-                            app:layout_constraintStart_toStartOf="@+id/imageView13"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_korean"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_korean"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_korean" />
 
                         <ImageView
-                            android:id="@+id/imageView14"
+                            android:id="@+id/btn_main_alone_chinese"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="40dp"
                             android:layout_marginLeft="40dp"
                             android:layout_marginTop="239dp"
                             android:src="@drawable/main_chinese"
-                            app:layout_constraintStart_toEndOf="@+id/imageView13"
+                            app:layout_constraintStart_toEndOf="@+id/btn_main_alone_korean"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
@@ -590,19 +589,19 @@
                             android:text="중식"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView14"
-                            app:layout_constraintStart_toStartOf="@+id/imageView14"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_chinese"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_chinese"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_chinese" />
 
                         <ImageView
-                            android:id="@+id/imageView15"
+                            android:id="@+id/btn_main_alone_pork"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="40dp"
                             android:layout_marginLeft="40dp"
                             android:layout_marginTop="239dp"
                             android:src="@drawable/main_pork"
-                            app:layout_constraintStart_toEndOf="@+id/imageView14"
+                            app:layout_constraintStart_toEndOf="@+id/btn_main_alone_chinese"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
@@ -613,9 +612,9 @@
                             android:text="족발/보쌈"
                             android:textColor="@color/mainBlack"
                             android:textSize="15sp"
-                            app:layout_constraintEnd_toEndOf="@+id/imageView15"
-                            app:layout_constraintStart_toStartOf="@+id/imageView15"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+                            app:layout_constraintEnd_toEndOf="@+id/btn_main_alone_pork"
+                            app:layout_constraintStart_toStartOf="@+id/btn_main_alone_pork"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_main_alone_pork" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

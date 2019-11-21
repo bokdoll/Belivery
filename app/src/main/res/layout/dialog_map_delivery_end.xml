@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="256dp"
-    android:layout_height="373dp"
+    android:layout_height="wrap_content"
     android:background="@drawable/border_dialog_white_filled"
     android:orientation="vertical">
 
@@ -80,53 +80,19 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView16"
         app:layout_constraintStart_toEndOf="@+id/textView16" />
 
-    <LinearLayout
-        android:id="@+id/ll_dialog_map_end_rider_star"
+    <RatingBar
+        android:id="@+id/rb_review_write_star_rate"
+        style="@style/customRatingBar_dialog_delivery_end"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_height="40dp"
         android:layout_marginTop="19dp"
-        android:gravity="right"
-        android:orientation="horizontal"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16">
-
-        <ImageView
-            android:id="@+id/iv_dialog_map_end_rider_star_1"
-            android:layout_width="25dp"
-            android:layout_height="26dp"
-            android:layout_marginRight="2dp"
-            android:src="@drawable/gray_star" />
-
-        <ImageView
-            android:id="@+id/v_dialog_map_end_rider_star_2"
-            android:layout_width="25dp"
-            android:layout_height="26dp"
-            android:layout_marginRight="2dp"
-            android:src="@drawable/gray_star" />
-
-        <ImageView
-            android:id="@+id/v_dialog_map_end_rider_star_3"
-            android:layout_width="25dp"
-            android:layout_height="26dp"
-            android:layout_marginRight="2dp"
-            android:src="@drawable/gray_star" />
-
-        <ImageView
-            android:id="@+id/v_dialog_map_end_rider_star_4"
-            android:layout_width="25dp"
-            android:layout_height="26dp"
-            android:layout_marginRight="2dp"
-            android:src="@drawable/gray_star" />
-
-        <ImageView
-            android:id="@+id/v_dialog_map_end_rider_star_5"
-            android:layout_width="25dp"
-            android:layout_height="26dp"
-            android:layout_marginRight="2dp"
-            android:src="@drawable/gray_star" />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btn_dialog_map_delivery_end"
@@ -138,19 +104,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll_dialog_map_end_rider_star">
+        app:layout_constraintTop_toBottomOf="@+id/rb_review_write_star_rate">
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="6sp"
+            android:text="완료"
             android:textColor="@android:color/white"
             android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="완료" />
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,14 +1,18 @@
-package com.ppusheoppusheo.belivery.ui
+package com.ppusheoppusheo.belivery.ui.map
 
 import android.Manifest
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.location.LocationManager
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
+import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -16,16 +20,23 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.ppusheoppusheo.belivery.R
+import com.ppusheoppusheo.belivery.ui.map.dialog.DialogMapDeliveryEnd
+import com.ppusheoppusheo.belivery.ui.map.dialog.DialogMapNotOrdered
 import kotlinx.android.synthetic.main.activity_map.*
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
 import net.daum.mf.map.api.MapView
+import java.lang.Exception
 
 
 class MapActivity : AppCompatActivity() {
 
     lateinit var mapView: MapView
     lateinit var lm: LocationManager
+
+    // -1 : 배달 중 , 0 : 주문 전, 1 : 배달 완료
+    var status_flag: Int = -1
+
 
     private val GPS_ENABLE_REQUEST_CODE = 2001
     private val PERMISSIONS_REQUEST_CODE = 100
@@ -51,46 +62,10 @@ class MapActivity : AppCompatActivity() {
 
         lm = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
-        val mapViewContainer = findViewById<ViewGroup>(R.id.mapview)
 
-        ((cl_map_top.parent) as ViewGroup).removeView(cl_map_top)
-        ((cl_map_rider_info.parent) as ViewGroup).removeView(cl_map_rider_info)
-
-        mapViewContainer.addView(mapView)
-        mapViewContainer.addView(cl_map_top)
-        mapViewContainer.addView(cl_map_rider_info)
+        initView(status_flag)
 
 
-        var location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
-        if (location != null) {
-            val long = location.longitude
-            val lat = location.latitude
-            onCurrentLocationUpdate(mapView, MapPoint.mapPointWithGeoCoord(lat, long), 0.0001f)
-        }
-
-        /**
-         *  현재 위치 잡기 : 우리 집 표시
-         */
-        mapView.setCustomCurrentLocationMarkerTrackingImage(
-            R.drawable.my_home_map,
-            MapPOIItem.ImageOffset(23, 23)
-        )
-        mapView.currentLocationTrackingMode =
-            MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading
-
-        /**
-         *  뒤로 가기 버튼
-         */
-        btn_map_back.setOnClickListener {
-            finish()
-        }
-
-        /**
-         *  전화 걸기를 눌렀을 때
-         */
-        btn_map_rider_tel.setOnClickListener {
-            openDial()
-        }
     }
 
     override fun onDestroy() {
@@ -99,11 +74,79 @@ class MapActivity : AppCompatActivity() {
         mapView.setShowCurrentLocationMarker(false)
     }
 
+    private fun initView(flag: Int) {
+        Log.d("현주", flag.toString())
+        val mapViewContainer = findViewById<ViewGroup>(R.id.mapview)
 
-    fun openDial() {
-        val tel = "tel:01098765432"
+        ((cl_map_top.parent) as ViewGroup).removeView(cl_map_top)
+        ((cl_map_rider_info.parent) as ViewGroup).removeView(cl_map_rider_info)
+
+        mapViewContainer.addView(mapView)
+        mapViewContainer.addView(cl_map_top)
+
+        // 뒤로 가기 버튼
+        btn_map_back.setOnClickListener {
+            finish()
+        }
+
+        if (flag == 0) {    // 주문 전
+                tv_map_location.text = "지도"
+                tv_map_location_description.visibility = View.GONE
+                displayDialog(flag)
+
+        } else {
+            mapViewContainer.addView(cl_map_rider_info)
+
+            //전화 걸기를 눌렀을 때
+            btn_map_rider_tel.setOnClickListener {
+                openDial("01049490303")
+            }
+
+
+            if (flag == 1) { //배달 완료
+                tv_map_location_description.text = "으로 배달 완료"
+                displayDialog(flag)
+
+
+            } else {   //배달 중
+                displayCurrentLocation()
+            }
+        }
+    }
+
+    // 현재 우리 집 표시하기
+    private fun displayCurrentLocation() {
+        var location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+        if (location != null) {
+            val long = location.longitude
+            val lat = location.latitude
+            onCurrentLocationUpdate(mapView, MapPoint.mapPointWithGeoCoord(lat, long), 0.0001f)
+        }
+
+        mapView.setCustomCurrentLocationMarkerTrackingImage(
+            R.drawable.my_home_map,
+            MapPOIItem.ImageOffset(23, 23)
+        )
+        mapView.currentLocationTrackingMode =
+            MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading
+    }
+
+    private fun openDial(num: String) {
+        val tel = "tel:".plus(num)
         val intent = Intent("android.intent.action.DIAL", Uri.parse(tel))
         startActivity(intent)
+    }
+
+    private fun displayDialog(flag: Int) {
+        lateinit var mapDialog: Dialog
+        when (flag) {
+            0 -> mapDialog = DialogMapNotOrdered(this@MapActivity)     // 주문 전
+            1 -> mapDialog = DialogMapDeliveryEnd(this@MapActivity)    // 배달 완료
+        }
+
+        mapDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        //mapDialog.setCanceledOnTouchOutside(true)
+        mapDialog.show()
     }
 
     fun onCurrentLocationUpdate(
