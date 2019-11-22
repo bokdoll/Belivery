@@ -21,6 +21,7 @@
             android:id="@+id/textView35"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/kopubworlddotumbold"
             android:text="빠른 주문"
             android:textColor="@color/Black2e"
             android:textSize="16sp"
