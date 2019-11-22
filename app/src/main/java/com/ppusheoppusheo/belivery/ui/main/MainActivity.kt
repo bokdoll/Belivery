@@ -14,7 +14,6 @@ import com.ppusheoppusheo.belivery.ui.map.MapActivity
 import com.ppusheoppusheo.belivery.ui.fastorder.FastOrderActivity
 import com.ppusheoppusheo.belivery.ui.main.adapter.AdViewPagerAdapter
 import com.ppusheoppusheo.belivery.ui.main.adapter.OrderTogetherRVAdapter
-import com.ppusheoppusheo.belivery.ui.map.MapActivity
 import com.ppusheoppusheo.belivery.ui.restaurant.RestaurantActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
