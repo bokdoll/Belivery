@@ -16,6 +16,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
+=======
+
+        <activity android:name=".ui.FinishOrderActivity"></activity>
+        <activity android:name=".ui.MyPageActivity" />
+>>>>>>> 9e454b1fb16a6aad520d1b6f70c7cc154a5af258
         <activity android:name=".ui.fastorder.FastOrderActivity"></activity>
         <activity android:name=".ui.restaurant.RestaurantActivity" />
         <activity android:name=".ui.map.MapActivity" />
@@ -31,7 +37,15 @@
             android:name="com.kakao.sdk.Appkey"
             android:value="5b881df4199113d607ba0e70aeaf7989" />
 
+<<<<<<< HEAD
         <activity android:name=".ui.main.MainActivity" android:theme="@style/MainTheme"/>
+=======
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:theme="@style/MainTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+>>>>>>> 9e454b1fb16a6aad520d1b6f70c7cc154a5af258
 
     </application>
 
