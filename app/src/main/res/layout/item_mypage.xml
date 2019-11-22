@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="139dp"
+    android:layout_height="144dp"
+    android:background="@drawable/border_mypage"
+    >
+
+
+    <TextView
+        android:id="@+id/txt_my_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.04"
+        android:lineSpacingExtra="6sp"
+        android:text="미호식당"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_my_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.04"
+        android:lineSpacingExtra="6sp"
+        android:text="로제치즈돈까스 1개"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_my_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.04"
+        android:lineSpacingExtra="6sp"
+        android:text="9,000원"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/img_my"
+        android:layout_width="108.9dp"
+        android:layout_height="29.7dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="95.6dp"
+        android:background="@drawable/btn_greed"
+        android:gravity="center"
+        android:letterSpacing="-0.05"
+        android:lineSpacingExtra="6sp"
+        android:text="리뷰작성 >"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

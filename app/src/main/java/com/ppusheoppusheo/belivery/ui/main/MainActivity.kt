@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asksira.loopingviewpager.LoopingViewPager
 import com.ppusheoppusheo.belivery.R
 import com.ppusheoppusheo.belivery.model.OrderTogetherData
+import com.ppusheoppusheo.belivery.ui.MyPageActivity
+import com.ppusheoppusheo.belivery.ui.map.MapActivity
 import com.ppusheoppusheo.belivery.ui.fastorder.FastOrderActivity
 import com.ppusheoppusheo.belivery.ui.main.adapter.AdViewPagerAdapter
 import com.ppusheoppusheo.belivery.ui.main.adapter.OrderTogetherRVAdapter
@@ -68,6 +70,11 @@ class MainActivity : AppCompatActivity() {
         btn_main_alone_zzim.setOnClickListener { startRestaurantActivity(9)}
         btn_main_alone_dosirak.setOnClickListener { startRestaurantActivity(10)}
         btn_main_alone_dessert.setOnClickListener { startRestaurantActivity(11)}
+
+        btn_main_mypage.setOnClickListener{
+            val intent = Intent(this, MyPageActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     //식당 액티비티 띄우기
