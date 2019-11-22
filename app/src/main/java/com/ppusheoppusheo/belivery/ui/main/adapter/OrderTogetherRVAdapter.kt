@@ -51,8 +51,9 @@ class OrderTogetherRVAdapter(private val ctx: Context, var dataList: List<OrderT
     }
 
     // 같이 시키리 카운트 다운 타이머
-    fun startTimer(min: Int, sec: Int, tvMin: TextView, tvSec: TextView) {
-        var millisFuture: Long = ((min * 60 + sec) * 1000).toLong()
+    fun startTimer(min: Int, sec: Double, tvMin: TextView, tvSec: TextView) {
+        var intSec: Int = sec.toInt()
+        var millisFuture: Long = ((min * 60 + intSec) * 1000).toLong()
         var countDownTimer = object : CountDownTimer(millisFuture, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 var rest_time: Long = millisUntilFinished / 1000
@@ -66,9 +67,9 @@ class OrderTogetherRVAdapter(private val ctx: Context, var dataList: List<OrderT
                     tvMin.setText(String.format(Locale.getDefault(), "%d", rest_min))
                 }
                 if (rest_sec < 10){
-                    tvSec.setText(String.format(Locale.getDefault(), "0%d", rest_sec))
+                    tvSec.setText(String.format(Locale.getDefault(), "0%d초", rest_sec))
                 }else{
-                    tvSec.setText(String.format(Locale.getDefault(), "%d", rest_sec))
+                    tvSec.setText(String.format(Locale.getDefault(), "%d초", rest_sec))
                 }
             }
 
