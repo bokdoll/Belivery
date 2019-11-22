@@ -15,10 +15,9 @@
         tools:background="@color/colorMint" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="45dp"
-        android:layout_height="25dp"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/border_main_ad_gray"
         app:layout_constraintBottom_toBottomOf="@+id/item_pager_img"
@@ -28,25 +27,27 @@
             android:id="@+id/tv_item_pager_ad_sum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/notosansregular"
             android:text="/ 3"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/tv_item_pager_ad_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/kopubworlddotumbold"
             android:text="*"
             android:textColor="@android:color/white"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tv_item_pager_ad_sum"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

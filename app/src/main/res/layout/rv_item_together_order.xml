@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@android:color/white"
     android:orientation="vertical">
 
@@ -50,7 +50,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp"
+                android:fontFamily="@font/kopubworlddotumbold"
                 android:text="식당 이름"
+                android:textColor="@color/Black2e"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +74,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/kopubworlddotumbold"
                     android:text="00"
+                    android:textColor="@color/colorMint"
                     android:textSize="13sp"
                     app:lineHeight="19sp" />
 
@@ -81,7 +85,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/kopubworlddotumbold"
                     android:text="분 "
+                    android:textColor="@color/colorMint"
                     android:textSize="13sp"
                     app:lineHeight="19sp" />
 
@@ -89,7 +95,9 @@
                     android:id="@+id/tv_rv_item_main_together_sec"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="00"
+                    android:fontFamily="@font/kopubworlddotumbold"
+                    android:text="00초"
+                    android:textColor="@color/colorMint"
                     android:textSize="13sp"
                     app:lineHeight="19sp" />
 
@@ -97,7 +105,8 @@
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="초 안에"
+                    android:fontFamily="@font/kopubworlddotummedium"
+                    android:text=" 안에"
                     android:textSize="13sp"
                     app:lineHeight="19sp" />
 
@@ -116,7 +125,19 @@
                     android:id="@+id/tv_rv_item_main_together_price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/kopubworlddotumbold"
                     android:text="0000"
+                    android:textColor="@color/colorMint"
+                    android:textSize="13sp"
+                    app:lineHeight="19sp" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kopubworlddotumbold"
+                    android:text="원"
+                    android:textColor="@color/colorMint"
                     android:textSize="13sp"
                     app:lineHeight="19sp" />
 
@@ -124,7 +145,8 @@
                     android:id="@+id/textView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="원 이상 주문하기"
+                    android:fontFamily="@font/kopubworlddotummedium"
+                    android:text=" 이상 주문하기"
                     android:textSize="13sp"
                     app:lineHeight="19sp" />
             </LinearLayout>
@@ -145,6 +167,7 @@
             android:id="@+id/tv_rv_together"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/kopubworlddotumbold"
             android:text="같이 먹자 >"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
