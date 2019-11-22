@@ -8,12 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asksira.loopingviewpager.LoopingViewPager
 import com.ppusheoppusheo.belivery.R
 import com.ppusheoppusheo.belivery.model.OrderTogetherData
-<<<<<<< HEAD
+
 import com.ppusheoppusheo.belivery.ui.MyPageActivity
 import com.ppusheoppusheo.belivery.ui.map.MapActivity
-=======
 import com.ppusheoppusheo.belivery.ui.fastorder.FastOrderActivity
->>>>>>> c6fc11fe1cc9ff985aa184ab9336c694558b5305
 import com.ppusheoppusheo.belivery.ui.main.adapter.AdViewPagerAdapter
 import com.ppusheoppusheo.belivery.ui.main.adapter.OrderTogetherRVAdapter
 import com.ppusheoppusheo.belivery.ui.map.MapActivity
