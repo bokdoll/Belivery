@@ -18,17 +18,20 @@
         android:screenOrientation="portrait">
         <activity android:name=".ui.restaurant.RestaurantActivity"></activity>
         <activity android:name=".ui.map.MapActivity" />
+        <activity android:name=".ui.order.OrderComplete" />
+        <activity android:name=".ui.order.OrderActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.kakao.sdk.Appkey"
             android:value="5b881df4199113d607ba0e70aeaf7989" />
 
         <activity android:name=".ui.main.MainActivity" android:theme="@style/MainTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
