@@ -8,11 +8,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.ppusheoppusheo.belivery.R;
 import com.ppusheoppusheo.belivery.databinding.ActivityOrderBinding;
+import com.ppusheoppusheo.belivery.ui.OrderEndActivity;
+import com.ppusheoppusheo.belivery.ui.TogetherOrderActivity;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -24,7 +27,7 @@ public class OrderActivity extends AppCompatActivity {
     RadioGroup group;
     TextView price;
 
-
+    private int REQUEST_COMPLETE = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,8 @@ public class OrderActivity extends AppCompatActivity {
         group = activityOrderBinding.radioGroupOrder;
         price = activityOrderBinding.txtOrderPrice;
 
+
+        btnWith.setChecked(true);
 
         btnWith.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,13 +63,19 @@ public class OrderActivity extends AppCompatActivity {
         btnComplete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(getApplicationContext(),OrderComplete.class);
-                startActivity(intent);//액티비티 띄우기
-
+                Intent intent = new Intent(getApplicationContext(), OrderEndActivity.class);
+                startActivityForResult(intent, REQUEST_COMPLETE);//액티비티 띄우기
             }
         });
-
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_COMPLETE){
+            if (resultCode == RESULT_OK){
+                finish();
+            }
+        }
+    }
 }

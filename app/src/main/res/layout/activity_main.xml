@@ -190,7 +190,7 @@
                             android:letterSpacing="-0.02"
                             android:lineHeight="30sp"
                             android:lineSpacingExtra="14sp"
-                            android:text="00명"
+                            android:text="24명"
                             android:textColor="@android:color/white"
                             android:textSize="19sp" />
 
