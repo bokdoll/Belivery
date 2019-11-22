@@ -16,14 +16,26 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.StoreDetailActivity"></activity>
+        <activity android:name=".ui.start.Start3Activity" android:theme="@style/StartTheme"></activity>
+        <activity android:name=".ui.start.Start2Activity" />
+        <activity android:name=".ui.start.StartActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.OrderEndActivity"
+            android:theme="@style/OrderDeliveryCompleteTheme" />
+        <activity android:name=".ui.StoreDetailActivity" />
         <activity android:name=".ui.TogetherOrderActivity" />
-        <activity android:name=".ui.FinishOrderActivity" />
-        <activity android:name=".ui.MyPageActivity" />
+        <activity
+            android:name=".ui.MyPageActivity"
+            android:theme="@style/OrderDeliveryCompleteTheme" />
         <activity android:name=".ui.fastorder.FastOrderActivity" />
         <activity android:name=".ui.restaurant.RestaurantActivity" />
         <activity android:name=".ui.map.MapActivity" />
-        <activity android:name=".ui.order.OrderComplete" />
         <activity android:name=".ui.order.OrderActivity" />
 
         <meta-data
@@ -33,11 +45,7 @@
         <activity
             android:name=".ui.main.MainActivity"
             android:theme="@style/MainTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

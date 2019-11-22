@@ -13,7 +13,6 @@ import com.asksira.loopingviewpager.LoopingPagerAdapter
 class AdViewPagerAdapter(context: Context, itemList: ArrayList<Int>, isInfinite: Boolean) :
     LoopingPagerAdapter<Int>(context, itemList, isInfinite) {
 
-    //This method will be triggered if the item View has not been inflated before.
     override fun inflateView(viewType: Int, container: ViewGroup, listPosition: Int): View {
         return LayoutInflater.from(context).inflate(R.layout.item_pager_main_ad, container, false)
     }
@@ -28,9 +27,9 @@ class AdViewPagerAdapter(context: Context, itemList: ArrayList<Int>, isInfinite:
 
     private fun getBackgroundColor(number: Int): Int {
         when (number) {
-            0 -> return R.drawable.ad_img_1
-            1 -> return R.drawable.ad_img_1
-            2 -> return R.drawable.ad_img_1
+            0 -> return R.drawable.img_banner1
+            1 -> return R.drawable.img_banner2
+            2 -> return R.drawable.img_banner3
             else -> return android.R.color.black
         }
     }

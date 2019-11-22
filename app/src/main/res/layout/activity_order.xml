@@ -1,247 +1,270 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp">
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:paddingLeft="10dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/arrow_back"
-            android:id="@+id/img_order_before_btn"/>
-    </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="6">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="vertical"
-            android:weightSum="7">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="4">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="배달 정보"
-                        android:textSize="16dp"
-                        android:textColor="#6aced4"
-                        android:textStyle="bold"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="용산구 청파동2가 53 "
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:textColor="#2e2e2e"
-                        android:id="@+id/txt_order_address"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="[도로명] 청파로47길 90(청파동2가)"
-                        android:textColor="#434343"
-                        android:textSize="16dp"
-                        android:id="@+id/txt_order_new_address"/>
+        android:background="@android:color/white"
+        android:orientation="vertical">
 
-                </LinearLayout>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="변경"
-                    android:textSize="16dp"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:background="@drawable/btn_green"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="15dp"/>
-            </RelativeLayout>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.5"
-                android:background="@drawable/btn_input"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:text="201호"
-                android:paddingStart="20dp"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.5"
-                android:background="@drawable/btn_input"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:text="010-2200-1010"
-                android:paddingStart="20dp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="vertical"
-            android:weightSum="5">
-            <TextView
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="요청사항"
-                android:layout_marginLeft="15dp"
-                android:gravity="center_vertical"
-                android:textSize="16dp"
-                android:textColor="#6aced4"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="가게사장님께"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:textColor="#a0a0a0"
-                android:textStyle="bold"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.7"
-                android:background="@drawable/btn_input"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:text="덜 맵게 부탁드려용 ㅜㅜ"
-                android:paddingStart="20dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="라이더님께"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:textColor="#a0a0a0"
-                android:textStyle="bold"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.7"
-                android:background="@drawable/btn_input"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:text="집 문앞에 놔주세!"
-                android:paddingStart="20dp"
-                />
-        </LinearLayout>
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/img_order_before_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:src="@drawable/arrow_back" />
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:weightSum="6">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="결제 금액"
-                    android:textStyle="bold"
-                    android:textColor="#6aced4"
-                    android:layout_marginLeft="15dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#2e2e2e"
-                    android:textStyle="bold"
-                    android:textSize="26dp"
-                    android:id="@+id/txt_order_price"
-                    android:layout_marginLeft="15dp"
-                    android:text="20,800원"/>
-            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:orientation="horizontal"
-                >
-                <RadioGroup
+                android:orientation="vertical"
+                android:weightSum="7">
+
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/radio_group_order"
-                    android:weightSum="2"
-                    android:orientation="horizontal">
+                    android:layout_height="0dp"
+                    android:layout_weight="4">
+
                     <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center">
-                        <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="같이 시키리"
+                            android:text="배달 정보"
+                            android:textColor="#6aced4"
                             android:textSize="16dp"
-                            android:paddingLeft="10dp"
-                            android:button="@drawable/check_empty"
-                            android:id="@+id/radio_order_solo_btn"
-                            android:layout_gravity="center"
-                            />
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_order_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="용산구 청파동2가 53 "
+                            android:textColor="#2e2e2e"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_order_new_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[도로명] 청파로47길 90(청파동2가)"
+                            android:textColor="#434343"
+                            android:textSize="16dp" />
+
                     </LinearLayout>
-                   <LinearLayout
-                       android:layout_width="0dp"
-                       android:layout_height="match_parent"
-                       android:layout_weight="1"
-                       android:gravity="center">
-                       <RadioButton
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:id="@+id/radio_order_with_btn"
-                           android:paddingLeft="10dp"
-                           android:textSize="16dp"
-                           android:button="@drawable/checked"
-                           android:text="혼자 시키리"/>
-                   </LinearLayout>
 
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/btn_green"
+                        android:text="변경"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
 
-                </RadioGroup>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/btn_input"
+                    android:paddingStart="20dp"
+                    android:text="201호" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/btn_input"
+                    android:paddingStart="20dp"
+                    android:text="010-2200-1010" />
 
             </LinearLayout>
-            <Button
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:text="결제하기"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"
-                android:id="@+id/btn_compelete_order"
-                android:background="@drawable/btn_green">
-            </Button>
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="요청사항"
+                    android:textColor="#6aced4"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="가게사장님께"
+                    android:textColor="#a0a0a0"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1.7"
+                    android:background="@drawable/btn_input"
+                    android:paddingStart="20dp"
+                    android:text="덜 맵게 부탁드려용 ㅜㅜ" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="라이더님께"
+                    android:textColor="#a0a0a0"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1.7"
+                    android:background="@drawable/btn_input"
+                    android:paddingStart="20dp"
+                    android:text="집 문앞에 놔주세여!" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="결제 금액"
+                        android:textColor="#6aced4"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_order_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="20,800원"
+                        android:textColor="#2e2e2e"
+                        android:textSize="26dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/radio_group_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <RadioButton
+                                android:id="@+id/radio_order_solo_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:button="@drawable/check_empty"
+                                android:paddingLeft="10dp"
+                                android:text="같이 시키리"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <RadioButton
+                                android:id="@+id/radio_order_with_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/checked"
+                                android:paddingLeft="10dp"
+                                android:text="혼자 시키리"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_compelete_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/btn_green"
+                    android:text="결제하기"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"></Button>
+            </LinearLayout>
+
+
         </LinearLayout>
-
-
-    </LinearLayout>
     </LinearLayout>
 </layout>

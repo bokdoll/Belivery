@@ -13,6 +13,18 @@
         <item name="android:statusBarColor">@color/colorMint</item>
     </style>
 
+    <style name="StartTheme" parent="Theme.AppCompat.Light.NoActionBar">s
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/colorGreen</item>
+    </style>
+
+    <style name="OrderDeliveryCompleteTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">#f2f2f2</item>
+    </style>
+
     <style name="customRatingBar_dialog_delivery_end" parent="@android:style/Widget.RatingBar">
         <item name="android:progressDrawable">@drawable/ratingbar_dialog_delivery_end</item>
     </style>
