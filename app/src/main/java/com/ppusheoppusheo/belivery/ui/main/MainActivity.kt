@@ -8,10 +8,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.asksira.loopingviewpager.LoopingViewPager
 import com.ppusheoppusheo.belivery.R
 import com.ppusheoppusheo.belivery.model.OrderTogetherData
+<<<<<<< HEAD
 import com.ppusheoppusheo.belivery.ui.MyPageActivity
 import com.ppusheoppusheo.belivery.ui.map.MapActivity
+=======
+import com.ppusheoppusheo.belivery.ui.fastorder.FastOrderActivity
+>>>>>>> c6fc11fe1cc9ff985aa184ab9336c694558b5305
 import com.ppusheoppusheo.belivery.ui.main.adapter.AdViewPagerAdapter
 import com.ppusheoppusheo.belivery.ui.main.adapter.OrderTogetherRVAdapter
+import com.ppusheoppusheo.belivery.ui.map.MapActivity
 import com.ppusheoppusheo.belivery.ui.restaurant.RestaurantActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -47,6 +52,12 @@ class MainActivity : AppCompatActivity() {
         btn_main_map.setOnClickListener{
             val intent = Intent(this@MainActivity, MapActivity::class.java)
             startActivity(intent)
+        }
+
+        btn_main_order.setOnClickListener {
+            val intent = Intent(this@MainActivity, FastOrderActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.sliding_up, R.anim.stay)
         }
 
         //식당 액티비티 띄우기
