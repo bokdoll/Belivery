@@ -7,4 +7,7 @@
     <color name="colorMint">#6aced4</color>
     <color name="mainBlack">#5a5a5a</color>
     <color name = "restaurantBlack">#575757</color>
+    <color name="Black2e">#2e2e2e</color>
+    <color name = "grayB1">#b1b1b1</color>
+    <color name="grayC7">#c7c7c7</color>
 </resources>

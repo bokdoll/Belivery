@@ -16,8 +16,10 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".ui.FinishOrderActivity"></activity>
         <activity android:name=".ui.MyPageActivity" />
+        <activity android:name=".ui.fastorder.FastOrderActivity"></activity>
         <activity android:name=".ui.restaurant.RestaurantActivity" />
         <activity android:name=".ui.map.MapActivity" />
 
