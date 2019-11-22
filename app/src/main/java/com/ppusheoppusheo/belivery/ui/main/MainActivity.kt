@@ -11,10 +11,10 @@ import com.ppusheoppusheo.belivery.model.GetOrderTogetherResponse
 import com.ppusheoppusheo.belivery.model.OrderTogetherData
 import com.ppusheoppusheo.belivery.model.OrderTogetherNumData
 import com.ppusheoppusheo.belivery.ui.MyPageActivity
+import com.ppusheoppusheo.belivery.ui.map.MapActivity
 import com.ppusheoppusheo.belivery.ui.fastorder.FastOrderActivity
 import com.ppusheoppusheo.belivery.ui.main.adapter.AdViewPagerAdapter
 import com.ppusheoppusheo.belivery.ui.main.adapter.OrderTogetherRVAdapter
-import com.ppusheoppusheo.belivery.ui.map.MapActivity
 import com.ppusheoppusheo.belivery.ui.restaurant.RestaurantActivity
 import com.ppusheoppusheo.belivery.util.ApplicationController
 import com.ppusheoppusheo.belivery.util.NetworkService

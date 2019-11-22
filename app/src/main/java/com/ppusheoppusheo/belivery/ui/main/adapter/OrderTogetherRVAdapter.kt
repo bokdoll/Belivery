@@ -1,17 +1,20 @@
 package com.ppusheoppusheo.belivery.ui.main.adapter
 
 import android.content.Context
+import android.content.Intent
+import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.ppusheoppusheo.belivery.R
 import com.ppusheoppusheo.belivery.model.OrderTogetherData
-import android.os.CountDownTimer
+import com.ppusheoppusheo.belivery.ui.TogetherOrderActivity
 import java.util.*
 
 
@@ -38,6 +41,11 @@ class OrderTogetherRVAdapter(private val ctx: Context, var dataList: List<OrderT
             //holder.tvSec.text = item.rest_sec.toString()
             startTimer(item.rest_min, item.rest_sec, holder.tvMin, holder.tvSec)
             holder.tvPrice.text = item.rest_price.toString()
+
+            holder.clItem.setOnClickListener {
+                val intent = Intent(ctx, TogetherOrderActivity::class.java)
+                ctx.startActivity(intent)
+            }
         }
     }
 
@@ -48,6 +56,7 @@ class OrderTogetherRVAdapter(private val ctx: Context, var dataList: List<OrderT
         val tvMin: TextView = itemView.findViewById(R.id.tv_rv_item_main_together_min)
         val tvSec: TextView = itemView.findViewById(R.id.tv_rv_item_main_together_sec)
         val tvPrice: TextView = itemView.findViewById(R.id.tv_rv_item_main_together_price)
+        val clItem: ConstraintLayout = itemView.findViewById(R.id.cl_rv_item_restaurant)
     }
 
     // 같이 시키리 카운트 다운 타이머
