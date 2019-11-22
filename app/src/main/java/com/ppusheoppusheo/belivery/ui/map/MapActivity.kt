@@ -54,17 +54,7 @@ class MapActivity : AppCompatActivity() {
         mapView = MapView(this@MapActivity)
         mapView.setDaumMapApiKey("c40e78d2bd41c37abe418f6cf4595c75")
 
-        if (!checkLocationServicesStatus()) {
-            showDialogForLocationServiceSetting()
-        } else {
-            checkRunTimePermission()
-        }
-
-        lm = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-
-
         initView(status_flag)
-
 
     }
 
@@ -116,6 +106,14 @@ class MapActivity : AppCompatActivity() {
 
     // 현재 우리 집 표시하기
     private fun displayCurrentLocation() {
+        if (!checkLocationServicesStatus()) {
+            showDialogForLocationServiceSetting()
+        } else {
+            checkRunTimePermission()
+        }
+
+        lm = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+
         var location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
         if (location != null) {
             val long = location.longitude

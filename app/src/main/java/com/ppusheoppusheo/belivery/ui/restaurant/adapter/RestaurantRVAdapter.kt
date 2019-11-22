@@ -16,7 +16,7 @@ import com.ppusheoppusheo.belivery.model.RestaurantData
 class RestaurantRVAdapter (private val ctx: Context, var dataList: List<RestaurantData>)
     : RecyclerView.Adapter<RestaurantRVAdapter.Holder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantRVAdapter.Holder {
-        val view : View = LayoutInflater.from(ctx).inflate(R.layout.rv_item_restaurant, parent, false)
+        val view : View = LayoutInflater.from(ctx).inflate(R.layout.rv_item_restaurant_order_info, parent, false)
         return Holder(view)
     }
 
