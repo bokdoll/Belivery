@@ -8,16 +8,21 @@ import com.google.android.material.tabs.TabLayout
 import com.ppusheoppusheo.belivery.R
 import com.ppusheoppusheo.belivery.model.RestaurantData
 import com.ppusheoppusheo.belivery.ui.restaurant.adapter.RestaurantRVAdapter
+import com.ppusheoppusheo.belivery.util.ApplicationController
+import com.ppusheoppusheo.belivery.util.NetworkService
 import kotlinx.android.synthetic.main.activity_restaurant.*
 
 
 class RestaurantActivity : AppCompatActivity() {
 
     lateinit var restaurantRVAdapter: RestaurantRVAdapter
+    lateinit var networkService: NetworkService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurant)
+
+        networkService = ApplicationController.networkService
 
         initView()
     }
@@ -36,7 +41,7 @@ class RestaurantActivity : AppCompatActivity() {
         }
     }
 
-    // 식당 서버 통신
+    // 식당 서버 통신은 아직 구현 안됨
     private fun getRestaurantResponse(){
         var tmp : ArrayList<RestaurantData> = ArrayList<RestaurantData>()
 
