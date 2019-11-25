@@ -13,7 +13,7 @@ data class OrderTogetherNumData(
 )
 
 data class OrderTogetherData (
-    @SerializedName("store_img")
+    @SerializedName("stor_img")
     val food_img: String,
     @SerializedName("store_name")
     val restaurant_name : String,

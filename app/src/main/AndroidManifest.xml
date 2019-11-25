@@ -40,7 +40,7 @@
 
         <meta-data
             android:name="com.kakao.sdk.Appkey"
-            android:value="5b881df4199113d607ba0e70aeaf7989" />
+            android:value="" /> <!--value 를 넣으세요-->
 
         <activity
             android:name=".ui.main.MainActivity"

@@ -1,5 +1,9 @@
 package com.ppusheoppusheo.belivery.model
 
+data class GetFoodCategoryResponse(
+    val  message: ArrayList<RestaurantData>
+)
+
 data class RestaurantData (
     val restaurant_img: String,
     val restaurant_name: String,

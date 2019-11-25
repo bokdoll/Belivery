@@ -19,6 +19,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.ppusheoppusheo.belivery.R
 import com.ppusheoppusheo.belivery.ui.map.dialog.DialogMapDeliveryEnd
 import com.ppusheoppusheo.belivery.ui.map.dialog.DialogMapNotOrdered
@@ -52,7 +54,7 @@ class MapActivity : AppCompatActivity() {
         setContentView(R.layout.activity_map)
 
         mapView = MapView(this@MapActivity)
-        mapView.setDaumMapApiKey("c40e78d2bd41c37abe418f6cf4595c75")
+        mapView.setDaumMapApiKey(" ") /********여기 해시 키를 넣으세요********/
 
         initView(status_flag)
 
@@ -86,10 +88,15 @@ class MapActivity : AppCompatActivity() {
 
         } else {
             mapViewContainer.addView(cl_map_rider_info)
+            Glide.with(this@MapActivity)
+                .load(R.drawable.img_rider)
+                .apply(RequestOptions.centerCropTransform())
+                .apply(RequestOptions.circleCropTransform())
+                .into(iv_map_rider_img)
 
             //전화 걸기를 눌렀을 때
             btn_map_rider_tel.setOnClickListener {
-                openDial("01049490303")
+                openDial("010101010101")
             }
 
 
@@ -100,6 +107,7 @@ class MapActivity : AppCompatActivity() {
 
             } else {   //배달 중
                 displayCurrentLocation()
+                setMapPoint(37.547381, 126.962242)
             }
         }
     }
@@ -127,6 +135,17 @@ class MapActivity : AppCompatActivity() {
         )
         mapView.currentLocationTrackingMode =
             MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading
+    }
+
+    private fun setMapPoint(latitude: Double, longitude: Double){
+        var marker_point: MapPoint = MapPoint.mapPointWithGeoCoord(latitude, longitude)
+        var marker= MapPOIItem()
+        marker.itemName = "첫번째 집 방문 중입니다."
+        marker.mapPoint = marker_point
+        marker.markerType = MapPOIItem.MarkerType.BluePin
+        marker.selectedMarkerType = MapPOIItem.MarkerType.RedPin
+
+        mapView.addPOIItem(marker)
     }
 
     private fun openDial(num: String) {
